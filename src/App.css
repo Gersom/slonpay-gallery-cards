@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+button {
+  border-width: 1px;
+  border-radius: 7px;
+  background: none;
+  font-size: 14px;
+  height: 26px;
+}
+.o-wrapper {
+  box-sizing: border-box;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+}
+@media screen and (max-width: 480px) {
+  .o-wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.c-button {
+  align-items: center;
+  background: #0075ba;
+  border: 1px solid #0075ba;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #cecece;
+  cursor: pointer;
+  display: flex;
+  height: 29px;
+  justify-content: center;
+  min-width: 122px;
+  transition: 0.3s linear all;
+}
+.c-button__icon {
+  display: block;
+  height: 12px;
+  margin-right: 7px;
+  width: auto;
+}
+.c-button__text {
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s linear all;
+}
+.c-button:hover {
+  background: #e8e8e8;
+}
+.c-button:hover .c-button__text {
+  color: #333;
+}
+.c-button.is--white {
+  background: #fff;
+  border: 1px solid #fff;
+}
+.c-button.is--white .c-button__text {
+  color: #333;
+}
+.c-button.is--white:hover {
+  border: 1px solid #0075ba;
+}
+@media screen and (max-width: 667px) {
+  .c-button__text {
+    font-size: 12px;
+  }
+  .c-button.is--icon {
+    height: 35px;
+    min-width: initial;
+  }
+  .c-button.is--icon .c-button__icon {
+    margin: 0 10px;
+  }
+  .c-button.is--icon .c-button__text {
+    display: none;
+  }
+}

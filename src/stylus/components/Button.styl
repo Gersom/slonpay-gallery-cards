@@ -1,0 +1,48 @@
+.c-button
+  align-items: center
+  background $color-company
+  border 1px solid $color-company
+  border-radius: 5px
+  box-shadow: 1px 1px 5px $color-fourth
+  cursor: pointer
+  display: flex
+  height: 29px
+  justify-content: center
+  min-width: 122px
+  transition: 0.3s linear all
+
+  &__icon
+    display: block
+    height: 12px
+    margin-right: 7px
+    width: auto
+
+  &__text
+    color #fff
+    font-size: 14px
+    transition: 0.3s linear all
+  
+  &:hover
+    background $color-tertiary
+    .c-button__text
+      color #333
+
+.c-button.is--white
+  background: #fff
+  border 1px solid #fff
+  .c-button__text
+    color: #333
+  &:hover
+    border 1px solid $color-company
+
+@media screen and (max-width: 667px)
+  .c-button
+    &__text
+      font-size 12px
+    &.is--icon
+      height: 35px
+      min-width: initial
+      .c-button__icon
+        margin: 0 10px
+      .c-button__text
+        display none
