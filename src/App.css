@@ -78,3 +78,39 @@ button {
     display: none;
   }
 }
+.c-card {
+  margin: 25px;
+  width: 300px;
+  background: #808080;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.c-card__content {
+  position: relative;
+  width: calc(100% - 30px);
+}
+.c-card__frame {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.c-card__monster {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  height: auto;
+}
+.c-card__statistics {
+  position: absolute;
+  top: 30px;
+  right: 17px;
+  width: 30%;
+}
+.c-card__statistics img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
