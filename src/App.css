@@ -3,6 +3,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  background: #282c34;
 }
 button {
   border-width: 1px;
@@ -81,10 +82,13 @@ button {
 .c-card {
   margin: 25px;
   width: 300px;
-  background: #808080;
+  background: #11124a;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #eee;
+  border-radius: 15px;
+  padding-top: 20px;
 }
 .c-card__content {
   position: relative;
@@ -106,11 +110,45 @@ button {
 .c-card__statistics {
   position: absolute;
   top: 30px;
-  right: 17px;
-  width: 30%;
+  right: 20px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
 }
 .c-card__statistics img {
   display: block;
-  width: 100%;
   height: auto;
+  max-height: 35px;
+  margin-bottom: 5px;
+  max-width: 25px;
+}
+.c-card__statistics img:nth-child(2) {
+  margin-bottom: 13px;
+}
+.c-card__numbers {
+  align-items: flex-end;
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  position: absolute;
+  right: 28px;
+  top: 33px;
+  font-weight: 800;
+}
+.c-card__numbers>* {
+  color: #eee;
+  margin-top: 14px;
+  height: 25px;
+  background: #ffe401;
+  background: linear-gradient(90deg, rgba(2,0,36,0) 0%, #ffd211 100%);
+  border-radius: 20px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+.c-card__numbers>*:nth-child(1) {
+  margin-top: 0;
 }
