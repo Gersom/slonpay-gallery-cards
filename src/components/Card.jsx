@@ -1,29 +1,31 @@
 import React from "react";
 
-export function Card() {
+export function Card({
+  card= 'img/cards/card1.png',
+  monster='img/monsters/monster1.gif',
+  energy= 130,
+  life= 90,
+  power= 215,
+  color='yellow'
+}) {
   return (
     <div className='c-card'>
-      <div className='c-card__content'>
-        <img className='c-card__frame'
-        src="img/cards/card1.png" alt="Marco" />
-        <img className='c-card__monster'
-        src="img/monsters/monster1.gif" alt="Mounstro" />
-        
-        <div className='c-card__numbers'>
-          <span>130</span>
-          <span>952</span>
-          <span>70</span>
-        </div>
-        <div className='c-card__statistics'>
-          <img src="img/statistics/power3.png" alt="Poder" />
-          <img src="img/statistics/energy3.png" alt="Energia" />
-          <img src="img/statistics/life3.png" alt="Vida" />
-        </div>
+      <img className='c-card__frame'
+      src={card} alt="Marco" />
+      <img className='c-card__monster'
+      src={monster} alt="Mounstro" />
+      
+      <div className={`c-card__numbers is--${color}`}>
+        <span>{energy}</span>
+        <span>{life}</span>
+        <span>{power}</span>
       </div>
-      
-      <h3 className='c-card__name'>
-        Vexbrute</h3>
-      
+
+      <div className='c-card__statistics'>
+        <img src="img/statistics/power.png" alt="Poder" />
+        <img src="img/statistics/energy.png" alt="Energia" />
+        <img src="img/statistics/life.png" alt="Vida" />
+      </div>
     </div>
   );
 }

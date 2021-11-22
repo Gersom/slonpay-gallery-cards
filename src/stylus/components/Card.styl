@@ -1,18 +1,6 @@
 .c-card
-  margin: 25px
-  width: 300px
-  background: #11124a
-  display: flex
-  flex-direction: column
-  align-items: center
-  color: #eee
-  border-radius: 15px
-  padding-top: 20px
-  
-  &__content
-    position: relative
-    width: calc(100% - 30px)
-
+  width: 250px
+  position: relative
   &__frame
     width: 100%
     height: auto
@@ -21,7 +9,7 @@
   
   &__monster
     position: absolute
-    bottom: 0%
+    bottom: 5%
     left: 0%
     width: 100%
     height: auto
@@ -41,7 +29,6 @@
       max-width: 25px
     img:nth-child(2)
       margin-bottom: 13px
-    // img:nth-child(3)
   &__numbers
     align-items: flex-end
     display: flex
@@ -52,18 +39,27 @@
     right: 28px
     top 33px
     font-weight: 800
-    &>*
+    & > *
       color: #eee
       margin-top 14px
-      // text-shadow: 3px 2px 10px rgb(66, 66, 66)
       height: 25px
       background: rgb(255, 228, .5)
-      background: linear-gradient(90deg, #02002400 0%, #ffd211 100%)
-      border-radius: 20px
+      border-top-right-radius: 20px
+      border-bottom-right-radius: 20px
       width: 50px
       display: flex
       align-items: center
       justify-content: flex-end
       padding-right: 20px
-    &>*:nth-child(1)
+    & > *:nth-child(1)
       margin-top 0
+  &__numbers.is--yellow
+    span 
+      background: linear-gradient(90deg, #02002400 0%, #ffd211 100%)
+  &__numbers.is--gray
+    span 
+      background: linear-gradient(90deg, #02002400 0%, #f9f9f9 100%)
+      color: #f7f7f7
+  &__numbers.is--blue
+    span 
+      background: linear-gradient(90deg, #02002400 0%, #0055ad 50%)
