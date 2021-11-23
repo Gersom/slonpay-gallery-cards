@@ -4,7 +4,7 @@ const dataCards = [
     monster:'img/monsters/monster1.gif',
     energy: 150, life: 50, power: 80,
     color:'yellow',
-    name: 'Crypsoul'
+    name: 'Cryptsoul'
   }, {
     card:'img/cards/card2.png',
     monster:'img/monsters/monster2.gif',
