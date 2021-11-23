@@ -2,6 +2,7 @@ import React from "react";
 import dataCards from '../data'
 import { Card } from './Card'
 import { Owner } from './Owner'
+import { Price } from './Price'
 
 export function Grid() {
   
@@ -23,6 +24,10 @@ export function Grid() {
               {ele.name}</h3>
           </div>
 
+          <div className='c-grid__prices'>
+            <Price title='Precio inicial' />
+            <Price title='Precio actual' />
+          </div>
           <Owner />
 
           <button className={`c-grid__buy is--${ele.color}`}>

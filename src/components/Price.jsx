@@ -1,13 +1,16 @@
 import React from "react";
 
 export function Price({
-  initial= 0.33,
-  current= 5.3
+  title= 'Price',
+  number= 5.3
 }) {
   return (
     <div className='c-price'>
-      <p>{initial}</p>
-      <h4>{current}</h4>
+      <p className='c-price__title'>
+        {title}</p>
+
+      <h4 className='c-price__number'>
+        {number} ETH</h4>
     </div>
   );
 }
