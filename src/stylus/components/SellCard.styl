@@ -1,8 +1,32 @@
 .c-sell-card
-  background: #1b455c
-  display: flex
+  background: #2297d7
+  display: none
   justify-content: center
   color: #fff
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  &.is--active
+    display: flex
+  &__cross
+    align-content: center
+    display: flex
+    font-family: cursive
+    font-size: 35px
+    font-weight: 800
+    height: 55px
+    justify-content: center
+    position absolute
+    width: 55px
+    color: white
+    right: 10px
+    line-height: 1
+    top: 10px
+    border: none
+    cursor: pointer
+
   &__wrapper
     align-items: center
     display: flex
@@ -41,3 +65,7 @@
     justify-content: center
     align-items: center
     height: 60px
+    transition transform 0.3s ease
+    cursor: pointer
+    &:hover
+      transform: scale(0.95)

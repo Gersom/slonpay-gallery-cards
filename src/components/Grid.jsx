@@ -4,7 +4,11 @@ import { Card } from './Card'
 import { Owner } from './Owner'
 import { Price } from './Price'
 
-export function Grid() {
+export function Grid({
+  enableActive= () => ''
+}) {
+
+  
   
   return (
   <div className='c-grid'>
@@ -30,8 +34,10 @@ export function Grid() {
           </div>
           <Owner />
 
-          <button className={`c-grid__buy is--${ele.color}`}>
-            <span>COMPRAR</span>
+          <button 
+          className={`c-grid__buy is--${ele.color}`} 
+          onClick={enableActive}>
+            <span>Comprar</span>
           </button>
         </div>
       </div>

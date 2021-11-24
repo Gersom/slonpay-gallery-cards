@@ -1,4 +1,4 @@
-import React, { Fragment} from "react";
+import React, { Fragment, useState } from "react";
 
 import './App.css';
 
@@ -8,11 +8,26 @@ import { SellCard } from './components/SellCard'
 
 export function App() {
 
+  const [activeState, setActiveState] = useState(false);
+
+  const disableActive = () => {
+    setActiveState(() => false)
+  }
+  const enableActive = () => {
+    setActiveState(() => true)
+  }
+
   return (
     <Fragment>
       <Title />
-      <SellCard />
-      <Grid />
+
+      <Grid 
+        enableActive={enableActive} />
+
+      <SellCard 
+        active={activeState} 
+        disableActive={disableActive} />
+
     </Fragment>
   );
 }

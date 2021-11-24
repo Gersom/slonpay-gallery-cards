@@ -3,7 +3,10 @@ import { Card } from "./Card"
 import { Owner } from './Owner'
 import { Price } from './Price'
 
-export function SellCard() {
+export function SellCard({
+  active= false,
+  disableActive= () => ''
+}) {
   const ele = {
     card:'img/cards/card1.png',
     monster:'img/monsters/monster1.gif',
@@ -12,7 +15,11 @@ export function SellCard() {
     name: 'Cryptsoul'
   }
   return (
-    <div className='c-sell-card'>
+    <div className={`c-sell-card ${active ? 'is--active' : ''}`}>
+      <button 
+      className='c-sell-card__cross'
+      onClick={disableActive}>
+        x</button>
       <div className='c-sell-card__wrapper'>
         <div className='c-sell-card__card'>
           <Card 
