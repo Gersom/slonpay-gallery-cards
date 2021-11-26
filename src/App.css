@@ -25,6 +25,9 @@ button {
     padding-right: 15px;
   }
 }
+.is--modal-open {
+  filter: blur(3px);
+}
 .c-button {
   align-items: center;
   background: #0075ba;
@@ -95,10 +98,21 @@ button {
   justify-content: space-between;
   padding: 0 20px;
 }
+@media screen and (max-width: 750px) {
+  .c-title__wrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 .c-title__text {
   color: #fff;
   font-size: 53px;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 750px) {
+  .c-title__text {
+    margin: 0;
+  }
 }
 .c-title__input {
   position: relative;
@@ -119,6 +133,11 @@ button {
   border: none;
   padding: 0 20px 0 65px;
   color: #fff;
+}
+@media screen and (max-width: 750px) {
+  .c-title__input input {
+    height: 60px;
+  }
 }
 .c-grid {
   display: flex;
@@ -253,8 +272,17 @@ button {
   background: linear-gradient(90deg, rgba(2,0,36,0) 0%, #f9f9f9 100%);
   color: #f7f7f7;
 }
+.c-card__numbers.is--red span {
+  background: linear-gradient(90deg, rgba(2,0,36,0) 0%, #ba3331 50%);
+}
 .c-card__numbers.is--blue span {
   background: linear-gradient(90deg, rgba(2,0,36,0) 0%, #0055ad 50%);
+}
+.c-card__numbers.is--green span {
+  background: linear-gradient(90deg, rgba(2,0,36,0) 0%, #00692b 50%);
+}
+.c-card__numbers.is--black span {
+  background: linear-gradient(90deg, rgba(2,0,36,0) 0%, #ffa929 50%);
 }
 .c-owner {
   display: flex;
@@ -323,15 +351,16 @@ button {
   opacity: 0.9;
 }
 .c-sell-card {
-  background: #123b53;
   display: none;
   justify-content: center;
+  align-items: center;
   color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  filter: blur(0.5);
 }
 .c-sell-card.is--active {
   display: flex;
@@ -353,12 +382,23 @@ button {
   border: none;
   cursor: pointer;
 }
+.c-sell-card__cross-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+}
 .c-sell-card__wrapper {
+  background: #123b53;
   align-items: center;
   display: flex;
   max-width: 600px;
-  padding: 100px 15px;
+  padding: 100px 30px;
   width: 100%;
+  border-radius: 10px;
+  position: relative;
 }
 .c-sell-card__content {
   margin-left: 30px;
@@ -439,6 +479,19 @@ button {
   margin-left: 25px;
   font-size: 18px;
 }
+@media screen and (max-width: 750px) {
+  .c-header__btn {
+    font-size: 16px;
+    font-weight: 600;
+    width: 100px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .c-header__btn {
+    display: none;
+  }
+}
 .c-filters {
   display: flex;
   justify-content: center;
@@ -451,9 +504,21 @@ button {
   align-items: center;
   height: 150px;
 }
+@media screen and (max-width: 750px) {
+  .c-filters__wrapper {
+    flex-direction: column;
+    margin: 0 20px 30px 20px;
+    justify-content: space-around;
+  }
+}
 .c-filters__text {
   font-size: 30px;
   color: #fff;
+}
+@media screen and (max-width: 750px) {
+  .c-filters__text {
+    margin: 0;
+  }
 }
 .c-filters__content {
   display: flex;
@@ -473,6 +538,30 @@ button {
   background: #a9deee;
   color: #123b53;
 }
+@media screen and (max-width: 750px) {
+  .c-filters__content button {
+    margin-left: 15px;
+  }
+  .c-filters__content button:nth-child(1) {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .c-filters__content {
+    width: 100%;
+  }
+  .c-filters__content button {
+    height: initial;
+    border: none;
+    border-left: 1px solid rgba(169,222,238,0.314);
+    margin-left: 0;
+    padding: 0;
+    width: 100%;
+  }
+  .c-filters__content button:nth-child(1) {
+    border-left: none;
+  }
+}
 .c-footer {
   display: flex;
   justify-content: center;
@@ -485,6 +574,12 @@ button {
   color: rgba(250,250,250,0.502);
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 600px) {
+  .c-footer__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 .c-footer__left {
   width: 50%;
@@ -504,6 +599,13 @@ button {
   width: 50%;
   justify-content: flex-end;
 }
+@media screen and (max-width: 600px) {
+  .c-footer__right {
+    margin-bottom: 50px;
+    width: 100%;
+    justify-content: center;
+  }
+}
 .c-footer__links {
   margin-left: 30%;
   display: flex;
@@ -521,4 +623,9 @@ button {
 }
 .c-footer__links a:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 600px) {
+  .c-footer__links:nth-child(1) {
+    margin-left: 0;
+  }
 }

@@ -5,9 +5,15 @@ import { Owner } from './Owner'
 import { Price } from './Price'
 
 export function Grid({
-  enableActive= () => ''
+  enableActive= () => '',
+  changeSellData= () => ''
 }) {
   
+  const buyFunction = (newData) => {
+    enableActive()
+    changeSellData(newData)
+  }
+
 return (
 <div className='c-grid'>
   <div className='c-grid__wrapper'>
@@ -36,7 +42,13 @@ return (
 
         <button 
         className={`c-grid__buy is--${ele.color}`} 
-        onClick={enableActive}>
+        onClick={() => buyFunction({
+          card: ele.card,
+          monster: ele.monster,
+          energy: ele.energy, life: ele.life, power: ele.power,
+          color: ele.color,
+          name: ele.name
+        })}>
           <span>Comprar</span>
         </button>
       </div>

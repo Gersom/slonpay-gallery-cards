@@ -11,10 +11,15 @@
     align-items: center
     justify-content: space-between
     padding: 0 20px
+    @media screen and (max-width: 750px)
+      justify-content: center
+      flex-direction: column
   &__text
     color: #fff
     font-size: 53px
     letter-spacing: 1px
+    @media screen and (max-width: 750px)
+      margin: 0
   &__input
     position: relative
     label
@@ -32,3 +37,6 @@
       border: none
       padding: 0 20px 0 65px
       color: #fff
+      @media screen and (max-width: 750px)
+        height: 60px
+
