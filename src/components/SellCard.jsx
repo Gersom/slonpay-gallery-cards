@@ -5,34 +5,36 @@ import { Price } from './Price'
 
 export function SellCard({
   active= false,
-  disableActive= () => ''
-}) {
-  const ele = {
+  disableActive= () => '',
+  monster= {
     card:'img/cards/card1.png',
     monster:'img/monsters/monster1.gif',
     energy: 150, life: 50, power: 80,
     color:'yellow',
     name: 'Cryptsoul'
   }
+}) {
   return (
     <div className={`c-sell-card ${active ? 'is--active' : ''}`}>
       <button 
       className='c-sell-card__cross'
       onClick={disableActive}>
         x</button>
+      <button className='c-sell-card__cross-bg'
+      onClick={disableActive}></button>
       <div className='c-sell-card__wrapper'>
         <div className='c-sell-card__card'>
           <Card 
-            card={ele.card}
-            monster={ele.monster}
-            energy={ele.energy}
-            life={ele.life}
-            power={ele.power}
-            color={ele.color} />
+            card={monster.card}
+            monster={monster.monster}
+            energy={monster.energy}
+            life={monster.life}
+            power={monster.power}
+            color={monster.color} />
         </div>
         <div className='c-sell-card__content'>
           <h3 className='c-sell-card__title'>
-            Cryptsoul</h3>
+            {monster.name}</h3>
 
           <p className='c-sell-card__description'>
             Un monstruo singular que te dejara sorprendido ante tales atributos. Tiene una energia excelente, no te descepcionará</p>
