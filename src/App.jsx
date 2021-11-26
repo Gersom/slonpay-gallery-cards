@@ -3,6 +3,8 @@ import React, { Fragment, useState } from "react";
 import './App.css';
 
 import { Grid } from './components/Grid'
+import { Header } from './components/Header'
+import { Filters } from './components/Filters'
 import { Title } from './components/Title'
 import { SellCard } from './components/SellCard'
 
@@ -19,7 +21,9 @@ export function App() {
 
   return (
     <Fragment>
+      <Header />
       <Title />
+      <Filters />
 
       <Grid 
         enableActive={enableActive} />

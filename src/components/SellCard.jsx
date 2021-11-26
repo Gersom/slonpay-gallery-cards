@@ -44,7 +44,7 @@ export function SellCard({
           <Owner />
 
           <button className='c-sell-card__btn'>
-            COMPRAR</button>
+            Comprar</button>
         </div>
       </div>
     </div>

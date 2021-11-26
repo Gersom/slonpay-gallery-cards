@@ -1,12 +1,33 @@
 .c-title
   display: flex
   align-items: center
-  background: #141f24
-  height: 150px
   justify-content: center
+  background: #FAFAFA10
   margin-bottom: 50px
+  &__wrapper
+    height: 178px
+    width: 1200px
+    display: flex
+    align-items: center
+    justify-content: space-between
   &__text
-    font-family: cursive
     color: #fff
-    font-size: 50px
+    font-size: 53px
     letter-spacing: 1px
+  &__input
+    position: relative
+    label
+      position: absolute
+      top: calc(50% - 14px)
+      left: 25px
+      font-size: 20px
+    input
+      font-size: 18px
+      height: 90px
+      width: 320px
+      display: flex
+      align-items: center
+      background: #123B53
+      border: none
+      padding: 0 20px 0 65px
+      color: #fff
