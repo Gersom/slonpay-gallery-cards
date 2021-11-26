@@ -5,6 +5,7 @@ import './App.css';
 import { Grid } from './components/Grid'
 import { Header } from './components/Header'
 import { Filters } from './components/Filters'
+import { Footer } from './components/Footer'
 import { Title } from './components/Title'
 import { SellCard } from './components/SellCard'
 
@@ -31,6 +32,8 @@ export function App() {
       <SellCard 
         active={activeState} 
         disableActive={disableActive} />
+      
+      <Footer />
 
     </Fragment>
   );
